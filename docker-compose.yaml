@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  gen:
+    image: openapitools/openapi-generator-cli:latest
+    volumes:
+      - .:/mnt
+    working_dir: /mnt
+    command: 'generate
+        -g go-server
+        -i schema.yaml
+        -o output'

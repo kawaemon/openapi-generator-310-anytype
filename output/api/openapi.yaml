@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: API
+  version: 0.1.0
+servers:
+- url: /
+paths:
+  /foo:
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_foo_get_200_response'
+          description: ok
+components:
+  schemas:
+    _foo_get_200_response:
+      example:
+        foo: foo
+      properties:
+        foo:
+          type: string
+      type: object
