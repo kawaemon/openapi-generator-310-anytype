@@ -11,7 +11,7 @@ package openapi
 
 type FooGet200Response struct {
 
-	Foo string `json:"foo,omitempty"`
+	Foo *interface{} `json:"foo,omitempty"`
 }
 
 // AssertFooGet200ResponseRequired checks if the required fields are not zero-ed
